@@ -1,52 +1,50 @@
 :root {
-  --bwhite: 3px solid white;
+  --light-border: 3px solid white;
+  --light: white;
+  --dark: black;
 }
 body {
-  background-color: black;
+  background-color: var(--dark);
 }
 
 header {
-  border-bottom: var(--bwhite);
+  border-bottom: var(--light-border);
 }
 
 main {
-  border-top: var(--bwhite);
-  border-bottom: var(--bwhite);
+  border-top: var(--light-border);
+  border-bottom: var(--light-border);
 }
 
-label {
-  color: white;
-}
-span {
-  color: white;
+label,
+span,
+h1,
+.entries *,
+.fa-satellite-dish,
+#no-items {
+  color: var(--light);
 }
 
-h1 {
-  color: white;
-}
 figure {
   background-image: url(../images/nebulae1.png), url(../images/nebulae2.png),
     url(../images/nebulae3.png);
 }
 
 .left-pane {
-  border-right: var(--bwhite);
+  border-right: var(--light-border);
 }
 
 .right-pane {
-  border-left: var(--bwhite);
+  border-left: var(--light-border);
 }
 
 #button-submit {
-  color: white;
+  color: var(--light);
   background-color: black;
-  border-bottom: 0.5px solid white;
-  border-right: 0.5px solid white;
+  border-bottom: 0.5px solid var(--light);
+  border-right: 0.5px solid var(--light);
 }
 
 #button-submit:hover {
-  box-shadow: 5px 5px 25px white;
-}
-.fa-satellite-dish {
-  color: white;
+  box-shadow: 5px 5px 25px var(--light);
 }

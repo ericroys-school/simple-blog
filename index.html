@@ -27,7 +27,6 @@
     <header>
       <!-- light/dark mode switcher -->
       <i
-        onclick="setSwitcher()"
         id="mode-switcher"
         data-light="fa-solid fa-sun"
         data-dark="fa-solid fa-moon"
@@ -44,6 +43,7 @@
       <section class="right-pane">
         <div class="container">
           <h1>What's on your mind?</h1>
+          <p id="error-msg"></p>
           <form id="form-blog">
             <label for="username">Username</label>
             <input
@@ -75,6 +75,6 @@
         </div>
       </section>
     </main>
-    <script src="/assets/js/form.js"></script>
+    <script type="module" src="/assets/js/blogCreate.js"></script>
   </body>
 </html>

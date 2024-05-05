@@ -1,18 +1,22 @@
 :root {
-  --bblack: 3px solid black;
+  --dark-border: 3px solid black;
+  --light: white;
+  --dark: black;
 }
 
 header {
-  border-bottom: var(--bblack);
+  border-bottom: var(--dark-border);
 }
 
 main {
-  border-top: var(--bblack);
-  border-bottom: var(--bblack);
+  border-top: var(--dark-border);
+  border-bottom: var(--dark-border);
 }
 
-span {
-  color: black;
+span,
+#no-items,
+.fa-satellite-dish {
+  color: var(--dark);
 }
 
 figure {
@@ -20,22 +24,20 @@ figure {
 }
 
 .left-pane {
-  border-right: var(--bblack);
+  border-right: var(--dark-border);
 }
 
 .right-pane {
-  border-left: var(--bblack);
+  border-left: var(--dark-border);
 }
 
-#button-submit {
-  color: black;
-  background-color: white;
+#button-submit,
+.btn-back {
+  color: var(--light);
+  background-color: var(--dark);
 }
 
-#button-submit:hover {
+#button-submit:hover,
+.btn-back:hover {
   box-shadow: 5px 5px 10px slategrey;
-}
-
-.fa-satellite-dish {
-  color: black;
 }

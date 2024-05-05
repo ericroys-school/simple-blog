@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A Simple Blog</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/icons/css/solid.min.css"
+    />
+    <link
+      type="text/css"
+      href="./assets/icons/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link
+      id="css-switcher"
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/light.css"
+    />
+  </head>
+  <header class="list-header">
+    <h1>A Simple Blog</h1>
+    <div>
+      <button class="btn-back" onclick="document.location='index.html'">
+        Back
+      </button>
+      <!-- light/dark mode switcher -->
+      <i
+        id="mode-switcher"
+        data-light="fa-solid fa-sun"
+        data-dark="fa-solid fa-moon"
+      ></i>
+    </div>
+  </header>
+  <body>
+    <section id="entries" class="entries"></section>
+    <section class="footer"></section>
+    <script type="module" src="./assets/js/blogList.js"></script>
+  </body>
+</html>

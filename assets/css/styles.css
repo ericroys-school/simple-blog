@@ -90,6 +90,11 @@ section {
   width: 50%;
 }
 
+article {
+  border: 2px;
+  margin: var(--lrm);
+}
+
 .left-pane {
   margin-right: 0.25em;
 }
@@ -117,7 +122,45 @@ label {
   align-items: center;
   justify-content: center;
 }
+
 .fa-satellite-dish {
   padding: 1px;
   margin: 1px;
+}
+
+.entries {
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.entries article {
+  width: 90%;
+  border: 2px solid;
+  padding: var(--lrm);
+}
+.entries h3 {
+  border-bottom: 2px solid;
+}
+
+.blog-content {
+  padding: var(--lrm);
+}
+
+.blog-author {
+  margin-top: var(--lrm);
+}
+
+.list-header {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-back {
+  padding: 0px var(--lrm) 0px var(--lrm);
+  border-radius: 5px;
+}
+
+#error-msg {
+  color: red;
 }
