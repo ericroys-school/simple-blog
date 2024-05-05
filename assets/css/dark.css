@@ -1,0 +1,52 @@
+:root {
+  --bwhite: 3px solid white;
+}
+body {
+  background-color: black;
+}
+
+header {
+  border-bottom: var(--bwhite);
+}
+
+main {
+  border-top: var(--bwhite);
+  border-bottom: var(--bwhite);
+}
+
+label {
+  color: white;
+}
+span {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+figure {
+  background-image: url(../images/nebulae1.png), url(../images/nebulae2.png),
+    url(../images/nebulae3.png);
+}
+
+.left-pane {
+  border-right: var(--bwhite);
+}
+
+.right-pane {
+  border-left: var(--bwhite);
+}
+
+#button-submit {
+  color: white;
+  background-color: black;
+  border-bottom: 0.5px solid white;
+  border-right: 0.5px solid white;
+}
+
+#button-submit:hover {
+  box-shadow: 5px 5px 25px white;
+}
+.fa-satellite-dish {
+  color: white;
+}

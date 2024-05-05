@@ -1,0 +1,41 @@
+:root {
+  --bblack: 3px solid black;
+}
+
+header {
+  border-bottom: var(--bblack);
+}
+
+main {
+  border-top: var(--bblack);
+  border-bottom: var(--bblack);
+}
+
+span {
+  color: black;
+}
+
+figure {
+  background-image: url(../images/nebulae_dark.png);
+}
+
+.left-pane {
+  border-right: var(--bblack);
+}
+
+.right-pane {
+  border-left: var(--bblack);
+}
+
+#button-submit {
+  color: black;
+  background-color: white;
+}
+
+#button-submit:hover {
+  box-shadow: 5px 5px 10px slategrey;
+}
+
+.fa-satellite-dish {
+  color: black;
+}
