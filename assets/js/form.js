@@ -1,5 +1,6 @@
 //vars for the form inputs
-const BLOGKEY = "blogEntries";
+const BLOG = "blogEntries";
+const PICKER = "blogPicker";
 const NAME = "username";
 const TITLE = "title";
 const CONTENT = "content";
@@ -22,11 +23,12 @@ function getValue(id) {
  * storage upon submit
  */
 getElement("button-submit").addEventListener("click", (e) => {
+  getElement("form-blog").submit();
   //do form submit and keep values
   e.preventDefault();
 
   //write to storage
-  setStorage({
+  setStorageEntries({
     username: getValue(NAME),
     title: getValue(TITLE),
     content: getValue(CONTENT),
@@ -35,32 +37,37 @@ getElement("button-submit").addEventListener("click", (e) => {
 
 //get the blog entry array from local storage or create an empty one
 function getStorageEntries() {
-  let store = localStorage.getItem(BLOGKEY);
+  let store = localStorage.getItem(BLOG);
   return store ? JSON.parse(store) : [];
 }
 
 //write the new item to the local storage for blogEntries
-function setStorage(posting) {
+function setStorageEntries(posting) {
   if (posting) {
     let store = getStorageEntries();
     store.push(posting);
-    localStorage.setItem(BLOGKEY, JSON.stringify(store));
+    localStorage.setItem(BLOG, JSON.stringify(store));
   }
 }
 
-/**light/dark switcher */
-
+/**light/dark switcher
+ * using this with window load and also via
+ * button
+ */
 function setSwitcher() {
   let x = getElement("mode-switcher");
-  if (x.getAttribute("data-mode") === "light") {
+  let mode = localStorage.getItem(PICKER) || "dark";
+  if (mode === "light") {
+    //write setting to local storage
+    localStorage.setItem(PICKER, "dark");
     //toggle the icon to set the moon
-    x.setAttribute("data-mode", "dark");
     x.setAttribute("class", x.getAttribute("data-dark"));
     //change out the css
     getElement("css-switcher").setAttribute("href", "./assets/css/dark.css");
   } else {
+    //write setting the local storage
+    localStorage.setItem(PICKER, "light");
     //toggle the icon to set the sun
-    x.setAttribute("data-mode", "light");
     x.setAttribute("class", x.getAttribute("data-light"));
     //change out the css
     getElement("css-switcher").setAttribute("href", "./assets/css/light.css");
@@ -69,5 +76,4 @@ function setSwitcher() {
 
 window.onload = () => {
   setSwitcher();
-  getElement(NAME).focus();
 };

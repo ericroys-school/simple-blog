@@ -31,7 +31,6 @@
         id="mode-switcher"
         data-light="fa-solid fa-sun"
         data-dark="fa-solid fa-moon"
-        data-mode="light"
       ></i>
     </header>
     <main>
@@ -50,7 +49,7 @@
             <input
               id="username"
               type="text"
-              required="true"
+              required
               placeholder="Enter a Username"
             />
             <label for="title">Title</label>
@@ -69,9 +68,8 @@
               placeholder="Enter text content"
               form="form-blog"
             ></textarea>
-            <button id="button-submit" class="button-submit" type="submit">
-              Submit
-            </button>
+            <input id="button-submit" class="button-submit" type="submit">
+          </input>
           </form>
         </div>
       </section>
