@@ -50,9 +50,24 @@ function setStorage(posting) {
 
 /**light/dark switcher */
 
-function setSwitcher(){
-    let x = getElement("mode-switcher");
-    if(x.getAttribute("data-mode"))
+function setSwitcher() {
+  let x = getElement("mode-switcher");
+  if (x.getAttribute("data-mode") === "light") {
+    //toggle the icon to set the moon
+    x.setAttribute("data-mode", "dark");
+    x.setAttribute("class", x.getAttribute("data-dark"));
+    //change out the css
+    getElement("css-switcher").setAttribute("href", "./assets/css/dark.css");
+  } else {
+    //toggle the icon to set the sun
+    x.setAttribute("data-mode", "light");
+    x.setAttribute("class", x.getAttribute("data-light"));
+    //change out the css
+    getElement("css-switcher").setAttribute("href", "./assets/css/light.css");
+  }
 }
 
-window.onload = setSwitcher();
+window.onload = () => {
+  setSwitcher();
+  getElement(NAME).focus();
+};

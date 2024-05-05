@@ -6,12 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>A Simple Blog</title>
     <link
-      id="css-light"
-      rel="stylesheet"
-      type="text/css"
-      href="./assets/css/form.css"
-    />
-    <link
       rel="stylesheet"
       type="text/css"
       href="./assets/icons/css/solid.min.css"
@@ -21,12 +15,19 @@
       href="./assets/icons/css/fontawesome.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link
+      id="css-switcher"
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/light.css"
+    />
   </head>
   <body>
     <header>
       <!-- light/dark mode switcher -->
       <i
-        onclick="setSwitcher"
+        onclick="setSwitcher()"
         id="mode-switcher"
         data-light="fa-solid fa-sun"
         data-dark="fa-solid fa-moon"
