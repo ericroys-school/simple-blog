@@ -50,30 +50,43 @@ function setStorageEntries(posting) {
   }
 }
 
-/**light/dark switcher
- * using this with window load and also via
- * button
+//get current saved mode
+function getMode() {
+  return localStorage.getItem(PICKER) || "light";
+}
+/**light/dark switcher for toggling
  */
 function setSwitcher() {
-  let x = getElement("mode-switcher");
-  let mode = localStorage.getItem(PICKER) || "dark";
+  let mode = getMode();
   if (mode === "light") {
     //write setting to local storage
     localStorage.setItem(PICKER, "dark");
-    //toggle the icon to set the moon
-    x.setAttribute("class", x.getAttribute("data-dark"));
-    //change out the css
-    getElement("css-switcher").setAttribute("href", "./assets/css/dark.css");
+    setMode("dark");
   } else {
     //write setting the local storage
     localStorage.setItem(PICKER, "light");
+    setMode("light");
+  }
+}
+
+function setMode(mode) {
+  let x = getElement("mode-switcher");
+  if (!mode || mode === "light") {
     //toggle the icon to set the sun
     x.setAttribute("class", x.getAttribute("data-light"));
     //change out the css
     getElement("css-switcher").setAttribute("href", "./assets/css/light.css");
+  } else {
+    //toggle the icon to set the moon
+    x.setAttribute("class", x.getAttribute("data-dark"));
+    //change out the css
+    getElement("css-switcher").setAttribute("href", "./assets/css/dark.css");
   }
 }
 
+/* when window loads set the appropriate
+   mode retrieved from storage
+*/
 window.onload = () => {
-  setSwitcher();
+  setMode(getMode());
 };
