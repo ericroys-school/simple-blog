@@ -1,3 +1,7 @@
+/** Main consolidated css for not light/dark specifc
+    machinations
+**/
+
 :root {
   /* left right margins */
   --lrm: 1em;
@@ -9,11 +13,14 @@
   padding: 0;
 }
 
+/*space out the sun and moon */
 .fa-sun,
 .fa-moon {
   margin: var(--lrm);
   padding: 5px;
 }
+
+/* color the sun and moon */
 .fa-sun {
   color: orange;
 }
@@ -21,6 +28,7 @@
   color: white;
 }
 
+/* apply hover shadows to sun and moon */
 .fa-sun:hover {
   box-shadow: 5px 5px 5px black;
 }
@@ -29,6 +37,7 @@
   box-shadow: 5px 5px 5px white;
 }
 
+/* general styling for the form */
 form {
   padding: var(--lrm);
   display: flex;
@@ -43,6 +52,7 @@ h1 {
   margin: var(--lrm);
 }
 
+/* style heading on blog create */
 header {
   display: flex;
   align-items: center;
@@ -50,6 +60,7 @@ header {
   height: 50px;
 }
 
+/* style main for blog create */
 main {
   display: flex;
   justify-content: center;
@@ -57,10 +68,12 @@ main {
   height: 600px;
 }
 
-span {
+/* style for text in the nebulae */
+figure span {
   font-size: xx-large;
 }
 
+/* style for the nebulae circle in left pane */
 figure {
   height: 200px;
   width: 200px;
@@ -75,6 +88,7 @@ figure {
   align-content: center;
 }
 
+/* spacing for form container */
 .container {
   display: flex;
   flex-direction: column;
@@ -83,14 +97,16 @@ figure {
   height: 100%;
 }
 
-section {
+/* general style for left/right panes */
+.left-pane,
+.right-pane {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
 }
 
-article {
+.blog-entry {
   border: 2px;
   margin: var(--lrm);
 }
@@ -118,7 +134,7 @@ label {
 
 .button-submit {
   display: flex;
-  width: 83%;
+  width: 75%;
   align-items: center;
   justify-content: center;
 }
@@ -128,12 +144,14 @@ label {
   margin: 1px;
 }
 
+/* general styling for the section with blog entries */
 .entries {
   flex-direction: column;
   margin-top: 40px;
   width: 100%;
 }
 
+/* general styling for blog entry article */
 .entries article {
   width: 90%;
   border: 2px solid;
@@ -163,4 +181,34 @@ label {
 
 #error-msg {
   color: red;
+}
+
+.blog-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blog-footer h3 {
+  text-align: center;
+  width: 100%;
+}
+.blog-footer article {
+  width: 95%;
+  text-align: left;
+}
+
+.blog-footer li {
+  list-style: none;
+  text-align: left;
+}
+
+.blog-footer,
+.list-header {
+  outline-offset: 5px;
+}
+
+.blog-footer span {
+  font-weight: bold;
+  font-size: medium;
 }

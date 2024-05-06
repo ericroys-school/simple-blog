@@ -1,3 +1,7 @@
+/**
+ * JS specific to the listing of blog entries
+ */
+
 import { getStorageEntries, NAME, TITLE, CONTENT } from "./blog.js";
 import { getMode, setMode } from "./modePicker.js";
 import { getElement } from "./helper.js";

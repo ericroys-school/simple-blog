@@ -1,3 +1,6 @@
+/**
+ * JS to manage the light/dark mode storage/switching mechanisms
+ */
 import { getElement } from "./helper.js";
 const PICKER = "blogPicker";
 
@@ -11,8 +14,7 @@ export function getMode() {
   return localStorage.getItem(PICKER) || "light";
 }
 
-/**light/dark switcher for toggling
- */
+/**light/dark switcher for toggling */
 export function setSwitcher() {
   let mode = getMode();
   if (mode === "light") {

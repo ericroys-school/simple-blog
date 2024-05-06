@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>A Simple Blog</title>
+    <!-- The light/dark mode design switches out the css links for light/dark
+         depending on mode switcher press and value saved to local storage. The main
+         css link remains steady regardless. Default is light mode. 
+         Using font awesome fonts for the toggle sun/moon, and elsewhere. 
+    -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -38,8 +43,20 @@
     </div>
   </header>
   <body>
+    <!-- JS will automatically insert into entries section any blog entries -->
     <section id="entries" class="entries"></section>
-    <section class="footer"></section>
+    <section class="blog-footer">
+        <h3>Made with wholesome &#128030</h3>
+        <article>
+            <nav>
+                <ul>
+                <li><span>Portfolio:</span> eric roys</li>
+                <li><span>Blog:</span> In Another Life</li>
+                <li><span>Email:</span> eric.roys@gmail.com</li>
+                </ul>
+            </nav>
+        </article>
+    </section>
     <script type="module" src="./assets/js/blogList.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+/** all styling for light mode **/
+
 :root {
   --dark-border: 3px solid black;
   --light: white;
@@ -8,7 +10,8 @@ header {
   border-bottom: var(--dark-border);
 }
 
-main {
+main,
+.blog-footer {
   border-top: var(--dark-border);
   border-bottom: var(--dark-border);
 }
@@ -40,4 +43,9 @@ figure {
 #button-submit:hover,
 .btn-back:hover {
   box-shadow: 5px 5px 10px slategrey;
+}
+
+.list-header,
+.blog-footer {
+  outline: solid var(--dark);
 }

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>A Simple Blog</title>
+    <!-- The light/dark mode design switches out the css links for light/dark
+         depending on mode switcher press and value saved to local storage. The main
+         css link remains steady regardless. Default is light mode. 
+         Using font awesome fonts for the toggle sun/moon, and elsewhere. 
+    -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -33,6 +38,11 @@
       ></i>
     </header>
     <main>
+        <!-- Split the page with a left and right pane
+             The left having a sphere of nebulae with the
+              blog name inside. The right having a header
+              text and the form to create an entry.
+        -->
       <section class="left-pane">
         <div class="container">
           <figure>
@@ -50,14 +60,12 @@
               id="username"
               autocomplete="username"
               type="text"
-              required
               placeholder="Enter a Username"
             />
             <label for="title">Title</label>
             <input
               id="title"
               type="text"
-              required="true"
               placeholder="Enter a title"
             />
             <label for="content">Content</label>
@@ -65,7 +73,6 @@
               id="content"
               rows="3"
               cols="25"
-              required="true"
               placeholder="Enter text content"
               form="form-blog"
             ></textarea>
