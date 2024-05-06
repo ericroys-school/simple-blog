@@ -56,8 +56,3 @@ figure {
 .list-header {
   color: var(--light);
 }
-
-.list-header,
-.blog-footer {
-  outline: solid var(--light);
-}

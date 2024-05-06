@@ -45,10 +45,8 @@ form {
   padding: 10px;
   margin: 0 auto;
   flex-wrap: nowrap;
-  /* align-items: start;
   justify-content: space-between;
-  height: 45%;
-   */
+  height: 50%;
   width: 75%;
 }
 
@@ -77,15 +75,10 @@ main {
 /* style for text in the nebulae */
 figure span {
   font-size: xx-large;
-  /* text-wrap: balance; */
 }
 
 /* style for the nebulae circle in left pane */
 figure {
-  /* height: 200px;
-  width: 200px;
-  min-height: 100px;
-  min-width: 100px; */
   height: 30%;
   width: 75%;
   min-width: 115px;
@@ -146,15 +139,15 @@ label {
 }
 
 .button-submit {
-  display: flex;
+  border-radius: 5px;
   width: 75%;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  padding: 3px;
 }
 
 .fa-satellite-dish {
   padding: 1px;
-  margin: 1px;
+  margin-right: 1em;
 }
 
 /* general styling for the section with blog entries */
@@ -166,20 +159,29 @@ label {
 
 /* general styling for blog entry article */
 .entries article {
-  width: 90%;
+  width: 95%;
   border: 2px solid;
-  padding: var(--lrm);
+  /* padding: var(--lrm); */
 }
 .entries h3 {
   border-bottom: 2px solid;
+  padding-left: 5px;
+  margin-left: 5px;
+  width: 95%;
 }
 
 .blog-content {
-  padding: var(--lrm);
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 95%;
 }
 
 .blog-author {
   margin-top: var(--lrm);
+  width: 75%;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-wrap: wrap;
 }
 
 .list-header {
@@ -187,16 +189,12 @@ label {
   align-items: center;
 }
 
-.btn-back {
-  padding: 0px var(--lrm) 0px var(--lrm);
-  border-radius: 5px;
-}
-
 #error-msg {
   color: red;
 }
 
 .blog-footer {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -207,8 +205,11 @@ label {
   width: 100%;
 }
 .blog-footer article {
-  width: 95%;
+  width: 80%;
+  min-width: 20%;
   text-align: left;
+  margin-right: var(--lrm);
+  margin-left: var(--lrm);
 }
 
 .blog-footer li {
@@ -218,10 +219,34 @@ label {
 
 .blog-footer,
 .list-header {
-  outline-offset: 5px;
+  /* outline-offset: 5px; */
+  width: 100%;
 }
 
 .blog-footer span {
   font-weight: bold;
   font-size: medium;
+}
+
+.list-header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 2em;
+}
+
+.btn-back {
+  padding: 0px var(--lrm) 0px var(--lrm);
+  border-radius: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+}
+
+.list-header h1 {
+  width: 75%;
+  text-wrap: nowrap;
 }

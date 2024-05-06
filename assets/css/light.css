@@ -39,13 +39,11 @@ figure {
   color: var(--light);
   background-color: var(--dark);
 }
+#button-submit span {
+  color: var(--light);
+}
 
 #button-submit:hover,
 .btn-back:hover {
   box-shadow: 5px 5px 10px slategrey;
-}
-
-.list-header,
-.blog-footer {
-  outline: solid var(--dark);
 }
