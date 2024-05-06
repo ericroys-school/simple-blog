@@ -58,6 +58,7 @@ header {
   align-items: center;
   justify-content: flex-end;
   height: 50px;
+  width: 100%;
 }
 
 /* style main for blog create */
@@ -66,17 +67,24 @@ main {
   justify-content: center;
   margin-top: 0.5em;
   height: 600px;
+  flex-wrap: nowrap;
 }
 
 /* style for text in the nebulae */
 figure span {
   font-size: xx-large;
+  /* text-wrap: balance; */
 }
 
 /* style for the nebulae circle in left pane */
 figure {
-  height: 200px;
+  /* height: 200px;
   width: 200px;
+  min-height: 100px;
+  min-width: 100px; */
+  height: 30%;
+  width: 75%;
+  min-width: 115px;
   padding: var(--lrm);
   background-position: center;
   background-repeat: no-repeat;
@@ -104,6 +112,7 @@ figure {
   justify-content: center;
   align-items: center;
   width: 50%;
+  min-width: 25%;
 }
 
 .blog-entry {
