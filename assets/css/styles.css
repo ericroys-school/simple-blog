@@ -42,9 +42,13 @@ form {
   padding: var(--lrm);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  padding: 10px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  /* align-items: start;
   justify-content: space-between;
   height: 45%;
+   */
   width: 75%;
 }
 
