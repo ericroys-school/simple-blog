@@ -145,7 +145,8 @@ label {
   padding: 3px;
 }
 
-.fa-satellite-dish {
+.fa-satellite-dish,
+.fa-circle-arrow-left {
   padding: 1px;
   margin-right: 1em;
 }
@@ -204,12 +205,14 @@ label {
   text-align: center;
   width: 100%;
 }
+
 .blog-footer article {
   width: 80%;
   min-width: 20%;
   text-align: left;
   margin-right: var(--lrm);
   margin-left: var(--lrm);
+  margin-bottom: var(--lrm);
 }
 
 .blog-footer li {
@@ -249,4 +252,8 @@ label {
 .list-header h1 {
   width: 75%;
   text-wrap: nowrap;
+}
+
+#no-items {
+  margin-bottom: var(--lrm);
 }

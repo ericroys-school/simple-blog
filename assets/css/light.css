@@ -17,8 +17,7 @@ main,
 }
 
 span,
-#no-items,
-.fa-satellite-dish {
+#no-items {
   color: var(--dark);
 }
 
@@ -40,10 +39,14 @@ figure {
   background-color: var(--dark);
 }
 #button-submit span {
-  color: var(--light);
+  color: var(--dark);
 }
 
 #button-submit:hover,
 .btn-back:hover {
   box-shadow: 5px 5px 10px slategrey;
+}
+
+.fa-satellite-dish {
+  color: var(--light);
 }
