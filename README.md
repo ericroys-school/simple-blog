@@ -43,6 +43,14 @@ Additionally, if your preference is more hands-on, you can deploy manually to:
 - [IIS](https://learn.microsoft.com/en-us/iis/manage/creating-websites/scenario-build-a-static-website-on-iis)
 - [Apache Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/appdev/deployment.html)
 - [Apache Http](https://fullstackdeveloper.guru/2021/04/08/how-to-deploy-html-javascript-code-to-apache-http-server/)
+ 
+Or: 
+### Run with Docker
+ - clone the repo  `git clone https://github.com/ericroys-school/simple-blog.git`
+ - cd into the repo  `cd simple-blog`
+ - run `docker build -t blog:latest . && docker run -d -p 9001:80 --name blog blog`
+ *note*: choose a port other than 9001 if you wish
+ - open your browser to `http://localhost:9001`
 
 ## Usage
 
